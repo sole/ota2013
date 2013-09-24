@@ -1,12 +1,12 @@
 x-deck > x-card {
 	transition-property: all;
 	transition-duration: 0.5s;
-	display: -webkit-box;
+	/*display: -webkit-box;
     display: -moz-box;
 	display: box;
 	-webkit-box-align: center;
 	-moz-box-align: center;
-	box-align: center;
+	box-align: center;*/
 }
 
 x-deck > x-card[card-anim-type=fade]:not([reverse])[selected][before-animation] {
@@ -45,4 +45,21 @@ x-deck > x-card[card-anim-type=fade][reverse][leaving]:not([before-animation]) {
 	background: rgba(255, 255, 255, 0.3);
 	font-size: 1rem;
 	padding: 0.25rem 0.5rem;
+}
+
+#example_button {
+	font-size: 6rem;
+}
+
+#example_range {
+	transform: scale(6);
+	-webkit-transform: scale(3);
+	transform-origin: left top;
+	-webkit-transform-origin: left top;
+}
+
+#example_web_bell {
+	border: 1px solid red;
+	display: inline-block;
+	font-size: 4rem;
 }
