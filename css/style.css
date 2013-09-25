@@ -1,3 +1,11 @@
+h2 {
+	margin-bottom: 1rem;
+}
+
+ul {
+	list-style-position: inside;
+}
+
 x-deck > x-card {
 	transition-property: all;
 	transition-duration: 0.5s;
@@ -29,12 +37,17 @@ x-deck > x-card[card-anim-type=fade][reverse][leaving]:not([before-animation]) {
 	background-size: cover;
 }
 
-.cover h1 {
+.cover h1, .cover h2 {
 	color: #eee;
 	text-shadow: 1px 1px 0px #000;
 	background: rgba(0, 0, 0, 0.3);
 	display: inline-block;
 	padding: 0 0.25rem;
+}
+
+.cover p, .cover ul {
+	color: #fff;
+	text-shadow: 1px 1px 0px #000;
 }
 
 .credits {
@@ -59,7 +72,20 @@ x-deck > x-card[card-anim-type=fade][reverse][leaving]:not([before-animation]) {
 }
 
 #example_web_bell {
-	border: 1px solid red;
-	display: inline-block;
 	font-size: 4rem;
+}
+
+web-bell {
+	display: inline-block;
+	border: 1px solid #999;
+	background: #ddd;
+	background: linear-gradient(180deg, #eee, #ccc);
+	box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
+	padding: 1rem;
+	transition: 0.5s all;
+	border-radius: 0.25rem;
+}
+
+web-bell:active {
+	box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
 }
