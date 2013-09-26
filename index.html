@@ -16,8 +16,11 @@
         <header>
           <h1>Mozilla Brick</h1>
           <h2>UI components for modern web apps</h2>
-          <p><a href="https://mozilla.github.io/brick">mozilla.github.io/brick</a><br /><a href="https://twitter.com/MozBrick">@MozBrick</a></h2>
         </header>
+        <p><a href="https://mozilla.github.io/brick">mozilla.github.io/brick</a><br /><a href="https://twitter.com/MozBrick">@MozBrick</a></p>
+        <p><br /></p>
+        <p>Soledad Penadés<br /><a href="http://soledadpenades.com">soledadpenades.com</a><br />
+        <a href="https://twitter.com/supersole">@supersole</a></p>
         <img src="images/logo.svg">
       </x-card>
 
@@ -332,7 +335,7 @@ document.querySelector('section').appendChild(cal);
       </x-card>
 
 
-      <x-card>
+      <x-card class="cover" data-background="images/breakingbricks.gif">
         <header>
           <h1>Customising</h1>
           <h2>Your bricks, the way you like them!</h2>
@@ -396,7 +399,7 @@ x-appbar {
       </x-card>
 
 
-      <x-card>
+      <x-card class="cover" data-background="images/baking.gif">
         <header>
           <h1>Bake your own bricks</h1>
           <h2>The moment you've been waiting for</h2>
@@ -469,7 +472,16 @@ x-appbar {
         </header>
       </x-card>
 
-      
+
+      <x-card>
+        <header>
+          <h1>We're still in beta</h1>
+          <h2>Brick 1.0 ß7</h2>
+        </header>
+        <p>Expect bumps</p>
+      </x-card>
+
+
       <x-card>
         <header>
           <h1>Brick roadmap</h1>
@@ -484,12 +496,28 @@ x-appbar {
 
       <x-card>
         <header>
+          <h1>Brick 1.0</h1>
+        </header>
+        <ul class="features">
+          <li><b>&#x2713;</b>skinnability</li>
+          <li><b>&#x2713;</b>accessibility</li>
+          <li>new components</li>
+          <li><b>&#x2713;</b>modularity</li>
+          <li>30+FPS in Firefox OS</li>
+          <li><b>&#x2713;</b>Automated Testing</li>
+          <li>beautiful by default</li>
+        </ul>
+      </x-card>
+
+
+      <x-card>
+        <header>
           <h1>Brick roadmap</h1>
           <h2>H1 2014</h2>
         </header>
         <ul>
           <li>More components</li>
-          <li>Gaia skin</li>
+          <li>Gaia skin (Firefox OS theme)</li>
           <li>AppMaker integration</li>
           <li>Brick 2.0</li>
         </ul>
@@ -509,7 +537,14 @@ x-appbar {
         </ul>
       </x-card>
 
-    
+      
+      <x-card>
+        <header>
+          <h1>Not in the Brick roadmap</h1>
+          <h2>Unicorns and rainbows</h2>
+        </header>
+        <p>:-(</p>
+      </x-card> 
     </x-deck>
 
     <script src="js/libs/x-tag/core.js"></script>

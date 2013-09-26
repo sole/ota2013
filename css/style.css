@@ -29,6 +29,10 @@ x-deck > x-card[card-anim-type=fade][reverse][leaving]:not([before-animation]) {
 	opacity: 0;
 }
 
+ul.features li {
+	list-style-type: none;
+}
+
 .cover {
 	background-position: center;
 	background-repeat: no-repeat;

@@ -46,7 +46,16 @@ window.addEventListener('DOMComponentsLoaded', function() {
         'catglasses.gif',
         'catcham.gif',
         'cattired.gif',
-        'catfail.gif'
+        'catfail.gif',
+        'minicat.gif',
+        'catstrategy.gif',
+        'catwater.gif',
+        'catmassage.gif',
+        'catdance.gif',
+        'catpiano.gif',
+        'catfinity.gif',
+        'catdry.gif',
+        'catlick.gif'
     ];
 
     function getNextIndex() {
