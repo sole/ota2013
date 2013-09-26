@@ -32,7 +32,7 @@ x-appbar h1 {
 }
 
 #install {
-    xdisplay: none;
+    display: none;
     border-radius: 5px;
     border: 1px solid white;
     xfont-size: 1.1rem;

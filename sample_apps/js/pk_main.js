@@ -5,14 +5,23 @@ window.addEventListener('DOMComponentsLoaded', function() {
     
     if(navigator.mozApps) {
 
+        var manifestPath = 'http://localhost:8888/manifest.webapp'; // HAAACK
         installBtn.addEventListener('click', function() {
-            navigator.mozApps.install(location.href + 'manifest.webapp');
+            var installRequest = navigator.mozApps.install(manifestPath);
+
+            installRequest.onsuccess = function() {
+                installBtn.style.display = 'none';
+            };
+
         }, false);
 
-        var req = navigator.mozApps.getSelf();
+        
+        var req = navigator.mozApps.checkInstalled(manifestPath);
         req.onsuccess = function() {
             if(!req.result) {
                 installBtn.style.display = 'inline';
+            } else {
+                installBtn.style.display = 'none';
             }
         };
 
@@ -21,14 +30,7 @@ window.addEventListener('DOMComponentsLoaded', function() {
     // load new images on #cute tap
     var cute = document.getElementById('cute');
     cute.addEventListener('click', function() {
-        loadImage();
-
-        // Also remove the tooltip once the image has been tapped
-        var tooltip = document.querySelector('x-tooltip');
-        if(tooltip) {
-            tooltip.parentNode.removeChild(tooltip);
-        }
-
+        onNextImage();
     }, false);
 
     var lastIndex = 0;
@@ -60,6 +62,18 @@ window.addEventListener('DOMComponentsLoaded', function() {
 
     function getNextIndex() {
         return Math.round(Math.random() * images.length) % images.length;
+    }
+
+
+    function onNextImage() {
+        loadImage();
+        
+        // Also remove the tooltip once the image has been tapped
+        var tooltip = document.querySelector('x-tooltip');
+        if(tooltip) {
+            tooltip.parentNode.removeChild(tooltip);
+        }
+
     }
 
     function loadImage() {
