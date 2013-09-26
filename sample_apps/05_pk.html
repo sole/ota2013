@@ -8,14 +8,17 @@
   </head>
   <body>
     <x-layout>
-      <header>
-        <x-appbar>
-          <h1>Pocket Kitten</h1><button id="install">Installarama</button>
-        </x-appbar>
-      </header>
+      
+      <x-appbar>
+        <header>
+          <h1>Pocket Kitten <button id="install">Installarama</button></h1>
+        </header>
+      </x-appbar>
       <section>
         <x-flipbox>
-          <div id="cute">
+          <div>
+            <div id="cute"></div>
+            <x-tooltip trigger-style="hover" orientation="left">Tap to get more cutesy</x-tooltip>
           </div>
           <div id="about">
             <h1>Built with <a href="">Mozilla Brick</a></h1>

@@ -9,6 +9,10 @@ html, body {
     height: 100%;
     font-family: 'open sans';
 }
+* {
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-size: 2rem;
@@ -18,10 +22,31 @@ a {
     text-decoration: none;
 }
 
+x-appbar > * {
+    text-align: left;
+    vertical-align: middle;
+}
+
+x-appbar h1 {
+    display: inline-block;
+}
+
+#install {
+    xdisplay: none;
+    border-radius: 5px;
+    border: 1px solid white;
+    xfont-size: 1.1rem;
+    padding: 0.2rem;
+    xmargin-left: 3rem;
+    vertical-align: middle;
+}
+
 #cute {
     background-size: cover;
     background-position: center;
     background-image: url(../cute_images/pandas.gif);
+    width: 100%;
+    height: 100%;
 }
 
 #about {
