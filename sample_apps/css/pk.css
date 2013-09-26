@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'open sans';
+    src: url('OpenSans-SemiBold.ttf');
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'open sans';
+}
+
+body {
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+#cute {
+    background-size: cover;
+    background-position: center;
+    background-image: url(../cute_images/pandas.gif);
+}
+
+#about {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    font-size: 2rem;
+}
+
+#about a {
+    color: #0ff;
+}
+
+x-tabbar-tab {
+    transition: all 0.5s;
+}
+
+x-tabbar-tab[selected] {
+
+}

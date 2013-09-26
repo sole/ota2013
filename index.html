@@ -203,7 +203,7 @@
       <x-card>
         <header>
           <h1>Minimum app</h1>
-          </header>
+        </header>
         <code><pre>
 &lt;x-layout&gt;
   
@@ -294,9 +294,6 @@ document.querySelector('section').appendChild(cal);
           <li><strong>Include the js</strong> file at the end of your &lt;body&gt;:<br /><code>&lt;script src="js/brick.js"&gt;&lt;/script&gt;</code></li>
           <li>Instead of <code>window.onload</code>, <strong>listen for</strong> <code>DOMElementsLoaded</code></li>
         </ol>
-        <code><pre>
-<script src="js/brick.js"></script>
-</pre></code>
         <p class="credits">See it <a href="sample_apps/02_calendar.html">in action</a></p>
 
       </x-card>
@@ -342,6 +339,99 @@ x-appbar {
 
       </x-card>
 
+
+      <x-card>
+        <header>
+          <h1>Customising the bundle</h1>
+          <h2>Make a custom build</h2>
+        </header>
+        <p>TO DO</p>
+      </x-card>
+
+      <x-card>
+        <header>
+          <h1>Or when you know what you're doing: no bundling</h1>
+        </header>
+        <ol>
+          <li>clone the brick repo and run <code>make</code></li>
+          <li>include <code>dist/core/core.min.js</code></li>
+          <li>include the components you need, e.g. <code>dist/calendar/calendar.min.js</code></li>
+        </ol>
+      </x-card>
+
+
+      <x-card>
+        <header>
+          <h1>Bake your own bricks</h1>
+          <h2>The moment you've been waiting for</h2>
+        </header>
+      </x-card>
+
+
+      <x-card>
+        <header>
+          <h1>Three simple steps</h1>
+          <h2>At the very minimum</h2>
+        </header>
+        <ol>
+          <li>Include <code>dist/core/core.min.js</code></li>
+          <li>Write and include <code>your-brick.js</code></li>
+          <li>Write and include <code>your-brick.css</code> (optional)</li>
+        </ol>
+      </x-card>
+
+      <x-card>
+        <header>
+          <h1>What's in <code>your-brick.js</code>?</h1>
+          </header>
+        <code><pre>
+(function() {
+  xtag.register('your-brick', {
+    lifecycle: {
+      created: function() {
+        this.innerHTML = 'I am a brick';
+      }
+    }
+  });
+})();</pre></code>
+        <p class="credits">See it <a href="sample_apps/04_custombrick.html">in action</a></p>
+      </x-card>
+      
+      
+      <x-card>
+        <header>
+          <h1>Adding events</h1>
+          </header>
+        <code><pre>
+(function() {
+  xtag.register('your-brick', {
+    // ...
+    events: {
+      'tap': function(e) {
+        this.style.backgroundColor = 
+          '#' + Math.round(0xFFFFFF * Math.random())
+            .toString(16);
+      }
+    }
+  });
+})();</pre></code>
+        <p class="credits">See it <a href="sample_apps/04_custombrick.html">in action</a></p>
+      </x-card>
+
+
+      <x-card>
+        <header>
+          <h1>Something more advanced</h1>
+          <h2>Let's build a complete app</h2>
+        </header>
+      </x-card>
+
+
+      <x-card>
+        <header>
+          <h1>Pocket Kitten, <em>bricked</em></h1>
+        </header>
+      </x-card>
 
     
     </x-deck>

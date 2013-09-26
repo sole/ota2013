@@ -1,0 +1,10 @@
+your-brick {
+    border: 3px solid #ccc;
+    background: #800;
+    display: inline-block;
+    color: #eee;
+    padding: 0.5rem;
+    /* we don't want to select the text inside the 'brick' when clicking to change the colour */
+    -moz-user-select: none;
+    user-select: none;
+}

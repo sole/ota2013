@@ -13,12 +13,6 @@ code {
 x-deck > x-card {
 	transition-property: all;
 	transition-duration: 0.5s;
-	/*display: -webkit-box;
-    display: -moz-box;
-	display: box;
-	-webkit-box-align: center;
-	-moz-box-align: center;
-	box-align: center;*/
 }
 
 x-deck > x-card[card-anim-type=fade]:not([reverse])[selected][before-animation] {
@@ -39,6 +33,12 @@ x-deck > x-card[card-anim-type=fade][reverse][leaving]:not([before-animation]) {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+
+	/*display: flex;
+	align-items: stretch;
+	flex-direction: column;
+	flex-flow: column;*/
+
 }
 
 .cover h1, .cover h2 {

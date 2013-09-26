@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <title>Pocket Kitten, BRICKED</title>
+    <link rel="stylesheet" type="text/css" href="css/brick.css" />
+    <link rel="stylesheet" type="text/css" href="css/pk.css" />
+  </head>
+  <body>
+    <x-layout>
+      <header>
+        <x-appbar>
+          <h1>Pocket Kitten</h1><button id="install">Installarama</button>
+        </x-appbar>
+      </header>
+      <section>
+        <x-flipbox>
+          <div id="cute">
+          </div>
+          <div id="about">
+            <h1>Built with <a href="">Mozilla Brick</a></h1>
+            <h2>For <a href="">Over The Air 2013</a></h2>
+            <p>Thanks to Ruth John's <a href="">Pocket Kitten</a> for the inspiration!</p>
+          </div>
+        </x-flipbox>
+      </section>
+      <footer>
+        <x-tabbar>
+          <x-tabbar-tab target-selector="x-flipbox div:first-child" selected="true">
+            Cutesy
+          </x-tabbar-tab>
+          <x-tabbar-tab target-selector="x-flipbox div:nth-child(2)">
+            About
+          </x-tabbar-tab>
+        </x-tabbar>
+      </footer>
+    </x-layout>
+    <script src="js/brick.js"></script>
+    <script src="js/pk_main.js"></script>
+  </body>
+</html>
+
