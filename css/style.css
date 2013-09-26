@@ -2,8 +2,12 @@ h2 {
 	margin-bottom: 1rem;
 }
 
-ul {
+ol, ul {
 	list-style-position: inside;
+}
+
+code {
+	background: #fff;
 }
 
 x-deck > x-card {
@@ -88,4 +92,12 @@ web-bell {
 
 web-bell:active {
 	box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+ul.inline li {
+	display: inline;
+}
+
+ul.inline li+li:before {
+	content: " / ";
 }
